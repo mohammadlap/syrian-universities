@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل الجامعات السورية – مفاضلة 2026 / 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f1;--surface:#ffffff;--ink:#0f2420;--muted:#52645f;--line:#d5dfdc;
+  --brand:#0d4a45;--brand-2:#093a36;--link:#0d5a52;--accent:#c8962e;--accent-ink:#5a3f00;--accent-soft:#f6ecd2;
+  --chip:#e3ece9;--good:#17724a;--good-soft:#d9f0e4;--warn-soft:#fbf0d6;--warn-line:#e5c77a;--focus:#0d5a52;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1513;--surface:#112320;--ink:#e6efec;--muted:#9db2ac;--line:#223a35;
+    --brand:#2c9d8c;--brand-2:#0a2f2b;--link:#69d2bf;--accent:#e0b25a;--accent-ink:#f1d9a1;--accent-soft:#2b2412;
+    --chip:#183029;--good:#58d39a;--good-soft:#12342a;--warn-soft:#2b2412;--warn-line:#6b5420;--focus:#69d2bf;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1513;--surface:#112320;--ink:#e6efec;--muted:#9db2ac;--line:#223a35;
+  --brand:#2c9d8c;--brand-2:#0a2f2b;--link:#69d2bf;--accent:#e0b25a;--accent-ink:#f1d9a1;--accent-soft:#2b2412;
+  --chip:#183029;--good:#58d39a;--good-soft:#12342a;--warn-soft:#2b2412;--warn-line:#6b5420;--focus:#69d2bf;
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;font-size:16px;line-height:1.8;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Reem Kufi","Tajawal",system-ui,sans-serif;font-weight:700;line-height:1.35;margin:0}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.container{width:min(1120px,100% - 32px);margin-inline:auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .container{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Reem Kufi",sans-serif;font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand svg{color:var(--accent)}
+.nav{display:flex;gap:2px;overflow-x:auto;flex:1;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 12px;border-radius:6px;color:var(--muted);text-decoration:none;font-weight:500;white-space:nowrap;font-size:15px}
+.nav a:hover{background:var(--chip);color:var(--ink)}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:8px;cursor:pointer;display:grid;place-items:center;flex:none}
+.icon-btn:hover{background:var(--chip)}
+
+/* hero */
+.hero{color:#f2f7f5;background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%23c8962e' stroke-opacity='.22' stroke-width='1.2'%3E%3Crect x='24' y='24' width='40' height='40'/%3E%3Crect x='24' y='24' width='40' height='40' transform='rotate(45 44 44)'/%3E%3Ccircle cx='44' cy='44' r='9'/%3E%3C/g%3E%3C/svg%3E"),
+  linear-gradient(160deg,#093a36 0%,#0d4a45 60%,#0b413c 100%);
+  padding:54px 0 0}
+.hero h1{font-size:clamp(30px,5.4vw,52px);max-width:15em}
+.hero p.lead{max-width:44em;font-size:18px;color:#cfe2dd;margin:14px 0 0}
+.search-hero{margin-top:26px;display:flex;gap:10px;max-width:640px}
+.search-hero input{flex:1;min-width:0;border:2px solid transparent;border-radius:10px;padding:14px 16px;font:inherit;font-size:18px;background:#fff;color:#0f2420}
+.search-hero input:focus{border-color:var(--accent);outline:none}
+.btn{border:0;border-radius:10px;padding:13px 20px;font:inherit;font-weight:700;cursor:pointer;background:var(--accent);color:#2a1d00}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--link);border:1px solid var(--line);font-weight:500}
+.btn.ghost:hover{background:var(--chip)}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.quick button{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#f2f7f5;border-radius:999px;padding:5px 14px;font:inherit;font-size:14px;cursor:pointer}
+.quick button:hover{background:rgba(255,255,255,.18)}
+.deadline{margin-top:34px;background:rgba(0,0,0,.22);border-top:1px solid rgba(200,150,46,.45)}
+.deadline .container{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:center;padding:14px 0}
+.deadline strong{color:#f1cd7a;font-weight:700}
+.deadline .count{font-family:"Reem Kufi",sans-serif;font-size:22px;color:#f1cd7a}
+
+/* sections */
+section.block{padding:54px 0 8px}
+section.block>.container>h2{font-size:clamp(24px,3.6vw,34px)}
+.sub{color:var(--muted);max-width:46em;margin:8px 0 22px}
+.notice{background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:15px}
+.notice b{color:var(--accent-ink)}
+
+/* steps / timeline */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;padding:14px 56px 14px 0;border-bottom:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;right:0;top:14px;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-family:"Reem Kufi",sans-serif;font-weight:700}
+.steps b{display:block}
+.twocol{display:grid;gap:28px;grid-template-columns:1fr}
+@media(min-width:860px){.twocol{grid-template-columns:1.1fr .9fr}}
+.dates{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
+.dates div{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.dates div:last-child{border:0}
+.dates .d{flex:none;min-width:7.5em;font-weight:700;color:var(--link)}
+.dates .hl{background:var(--accent-soft)}
+
+/* controls */
+.controls{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:14px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content;max-width:100%;flex-wrap:wrap}
+.seg button{border:0;background:var(--surface);color:var(--muted);padding:9px 18px;font:inherit;font-weight:500;cursor:pointer}
+.seg button+button{border-inline-start:1px solid var(--line)}
+.seg button.on{background:var(--brand);color:#fff}
+.fields{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.field{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.field input,.field select{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);width:100%}
+.meta{margin:14px 2px;color:var(--muted);font-size:14px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.more{display:block;margin:20px auto 0}
+
+/* spec sheets */
+.sheet{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--brand);border-radius:6px;padding:14px 16px;min-width:0}
+.sheet header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px}
+.sheet h3{font-size:19px}
+.chip{display:inline-block;background:var(--chip);color:var(--muted);border-radius:999px;padding:1px 10px;font-size:12.5px;white-space:nowrap}
+.chip.gold{background:var(--accent-soft);color:var(--accent-ink)}
+.chip.ok{background:var(--good-soft);color:var(--good)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:6px 8px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:13px;white-space:nowrap}
+td.n{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.hit{background:var(--good-soft);color:var(--good);font-weight:700}
+.na{color:var(--muted)}
+.tag{display:block;font-size:12px;color:var(--muted)}
+.note{margin:8px 0 0;font-size:13.5px;color:var(--accent-ink);background:var(--accent-soft);border-radius:6px;padding:6px 10px}
+.ul{list-style:none;margin:6px 0 0;padding:0}
+.ul li{padding:5px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.ul li:last-child{border:0}
+.ul small{color:var(--muted)}
+.th{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 4px}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:8px;grid-column:1/-1}
+.uni h3{font-size:18px}
+.uni p{margin:2px 0 8px;color:var(--muted);font-size:14px}
+details.mini summary{cursor:pointer;color:var(--link);font-size:14px}
+
+/* static tables / faq */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 16px;overflow-x:auto}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:8px;margin-bottom:10px;padding:0 16px}
+.faq summary{cursor:pointer;padding:14px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--accent);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 0 14px;color:var(--ink)}
+.faq ul{margin:6px 0;padding-inline-start:20px}
+footer{margin-top:60px;background:var(--brand-2);color:#c5dad5;padding:30px 0 40px;font-size:14.5px}
+footer a{color:#f1cd7a}
+footer p{margin:6px 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="container">
+    <a class="brand" href="#home" aria-label="دليل الجامعات السورية">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+      دليل الجامعات السورية
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="#dates">المواعيد والخطوات</a>
+      <a href="#public">الجامعات الحكومية</a>
+      <a href="#private">الجامعات الخاصة</a>
+      <a href="#exams">الاختبارات</a>
+      <a href="#military">العسكرية والأمنية</a>
+      <a href="#faq">أسئلة شائعة</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="تبديل الوضع الداكن">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container">
+    <h1>أي اختصاص تفكّر فيه؟ شوف حدّه الأدنى بكل جامعة</h1>
+    <p class="lead">بيانات المفاضلة العامة 2026 – 2027 للجامعات الحكومية والخاصة، منظّمة بمكان واحد وقابلة للبحث، ومأخوذة من إعلانات وزارة التعليم العالي والبحث العلمي.</p>
+    <form class="search-hero" id="heroForm" role="search">
+      <input id="heroQ" type="search" placeholder="اكتب اختصاصاً أو مدينة: هندسة معلوماتية، حقوق، حلب…" aria-label="ابحث عن اختصاص أو مدينة">
+      <button class="btn" type="submit">ابحث</button>
+    </form>
+    <div class="quick" aria-label="اقتراحات بحث">
+      <button type="button" data-q="الهندسة المعلوماتية">الهندسة المعلوماتية</button>
+      <button type="button" data-q="الهندسة المدنية">الهندسة المدنية</button>
+      <button type="button" data-q="الحقوق">الحقوق</button>
+      <button type="button" data-q="الاقتصاد">الاقتصاد</button>
+      <button type="button" data-q="التمريض">التمريض</button>
+      <button type="button" data-q="الهندسة المعمارية">الهندسة المعمارية</button>
+    </div>
+  </div>
+  <div class="deadline">
+    <div class="container">
+      <span>التقديم الإلكتروني للمفاضلة: <strong>من 4/10/2026</strong> حتى <strong>نهاية الدوام الرسمي يوم الاثنين 19/10/2026</strong></span>
+      <span class="count" id="countdown" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="dates">
+  <div class="container">
+    <h2>المواعيد وخطوات التقديم</h2>
+    <p class="sub">التقديم يتم إلكترونياً وعن بُعد عبر التطبيق الخاص بالمفاضلة، ويمكن أيضاً مراجعة مراكز الدعم الموزّعة في المحافظات.</p>
+    <div class="twocol">
+      <ol class="steps">
+        <li><b>سدّد رسم التقديم</b>500 ليرة سورية جديدة عبر تطبيق «شام كاش».</li>
+        <li><b>دوّن رغباتك في بطاقة واحدة</b>رغبات الجامعات الحكومية ومعاهدها والجامعات الخاصة كلها تُكتب في بطاقة مفاضلة واحدة، دون حدّ لعدد الرغبات.</li>
+        <li><b>راجع بياناتك الشخصية بدقة</b>الاسم واسم الأب والأم والجنس والجنسية والمعدّل. الطالب مسؤول عن صحتها، ولا تُعدَّل بعد انتهاء المفاضلة.</li>
+        <li><b>ثبّت البطاقة</b>قبل التثبيت يمكنك تعديل رغباتك أكثر من مرة. بعد التثبيت تحتاج إلى «إلغاء التثبيت» وإعادة دفع الرسم لتعدّل. وتحصل على نسخة PDF بالرغبات.</li>
+        <li><b>انتظر النتائج</b>بعد إعلان أسماء المقبولين تُستكمل الأوراق المطلوبة للتسجيل النهائي.</li>
+      </ol>
+      <div class="dates" role="table" aria-label="المواعيد المهمة">
+        <div class="hl"><span class="d">4/10/2026</span><span>بدء التقديم للمفاضلة (وبدء التسجيل للاختبارات عبر التطبيق في الجامعات الخاصة)</span></div>
+        <div><span class="d">7 – 15/10/2026</span><span>اختبار معهد الآثار والمتاحف في دمشق</span></div>
+        <div><span class="d">10 – 14/10/2026</span><span>اختبارات التمثيل والإخراج السينمائي (الجامعة العربية الدولية وجامعة المنارة)</span></div>
+        <div><span class="d">11/10/2026</span><span>آخر موعد للتسجيل على اختبارات الجامعات الخاصة عبر التطبيق</span></div>
+        <div><span class="d">11 – 15/10/2026</span><span>اختبار التربية الموسيقية في حمص</span></div>
+        <div><span class="d">14 و15/10/2026</span><span>اختبار المعهد التقاني للفنون التطبيقية في دمشق</span></div>
+        <div class="hl"><span class="d">19/10/2026</span><span>آخر يوم للتقديم (نهاية الدوام الرسمي)</span></div>
+      </div>
+    </div>
+    <div class="notice"><b>مراكز الدعم:</b> تستقبل الطلاب يومياً من التاسعة صباحاً حتى الثانية والنصف ظهراً، ما عدا الجمعة والسبت، ضمن فترة التسجيل.</div>
+  </div>
+</section>
+
+<section class="block" id="public">
+  <div class="container">
+    <h2>الجامعات الحكومية: ابحث عن اختصاصك</h2>
+    <p class="sub">اختر فرعك (علمي أو أدبي)، واكتب اسم الاختصاص أو المدينة. إن كتبت معدّلك فسيُظهر لك الصفحة الاختصاصات التي يحقّ لك التقدّم إليها وتُلوَّن الخانات المناسبة.</p>
+    <div class="notice"><b>انتبه:</b> الأرقام هنا هي <b>الحدود الدنيا المطلوبة للتقدّم</b> وليست علامات القبول النهائية. القبول يتم بالتفاضل بين المتقدّمين حسب المجموع، فقد يكون الحدّ الفعلي للقبول أعلى بكثير من الحدّ الأدنى.</div>
+    <div class="controls" id="pubControls">
+      <div class="seg" id="pubBranch" role="group" aria-label="الفرع">
+        <button type="button" data-v="sci" class="on">الفرع العلمي</button>
+        <button type="button" data-v="lit">الفرع الأدبي</button>
+        <button type="button" data-v="inst">المعاهد الصحية والطبية</button>
+      </div>
+      <div class="fields">
+        <label class="field"><span>اختصاص أو مدينة</span><input id="pubQ" type="search" placeholder="مثال: هندسة، حقوق، حمص"></label>
+        <label class="field"><span>المحافظة</span><select id="pubProv"></select></label>
+        <label class="field"><span>الفئة</span><select id="pubCat"></select></label>
+        <label class="field"><span>معدّلي بالمئة (اختياري)</span><input id="pubScore" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="مثال: 78"></label>
+      </div>
+    </div>
+    <div id="pubMeta" class="meta" aria-live="polite"></div>
+    <div id="pubResults" class="grid"></div>
+    <button class="btn ghost more" id="pubMore" type="button" hidden>عرض المزيد</button>
+    <div class="notice" id="pubNote"></div>
+  </div>
+</section>
+
+<section class="block" id="private">
+  <div class="container">
+    <h2>الجامعات الخاصة (المأجورة)</h2>
+    <p class="sub">رغبات الجامعات الخاصة تُدوَّن في نفس بطاقة المفاضلة. الرسوم والأقساط تحدّدها كل جامعة، وتُعرف من موقعها الرسمي أو بمراجعتها مباشرة.</p>
+    <div class="notice"><b>مقرات مؤقتة:</b> من يختار جامعة قرطبة (فرع حلب) أو جامعة الاتحاد (مقر عالقين أو فرع حلب) أو جامعة المنارة، يتعهّد بعلمه أن الدوام في مقراتها المؤقتة هو للعام 2026 – 2027 فقط، وأنها تعود لمقراتها الدائمة في العام 2027 – 2028.</div>
+    <div class="controls" id="privControls">
+      <div class="seg" id="privView" role="group" aria-label="طريقة العرض">
+        <button type="button" data-v="spec" class="on">حسب الاختصاص</button>
+        <button type="button" data-v="uni">دليل الجامعات</button>
+      </div>
+      <div class="fields">
+        <label class="field"><span>اختصاص أو جامعة</span><input id="privQ" type="search" placeholder="مثال: صيدلة، المنارة، حقوق"></label>
+        <label class="field"><span>محافظة الجامعة</span><select id="privProv"></select></label>
+        <label class="field" id="privCatWrap"><span>الفئة</span><select id="privCat"></select></label>
+        <label class="field" id="privBrWrap"><span>الفرع</span>
+          <select id="privBr"><option value="">علمي وأدبي</option><option value="sci">علمي</option><option value="lit">أدبي</option></select></label>
+        <label class="field"><span>معدّلي بالمئة (اختياري)</span><input id="privScore" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="مثال: 70"></label>
+      </div>
+    </div>
+    <div id="privMeta" class="meta" aria-live="polite"></div>
+    <div id="privResults" class="grid"></div>
+    <button class="btn ghost more" id="privMore" type="button" hidden>عرض المزيد</button>
+    <h3 style="margin-top:34px">طلاب الثانوية المهنية</h3>
+    <p class="sub" style="margin-bottom:10px">للثانويات الصناعية والتجارية وغيرها حدود خاصة بها (الجدول رقم 3 في الإعلان 7). أبرزها:</p>
+    <div class="panel"><table>
+      <thead><tr><th>الثانوية / المهنة</th><th>الاختصاصات المقابلة</th><th>الحد الأدنى</th></tr></thead>
+      <tbody>
+        <tr><td>الصناعية: تقنيات الحاسوب، أنظمة التشغيل والبرمجة، الشبكات، البرمجة، التجهيزات الحاسوبية، صيانة الحواسيب، التحكم الآلي</td><td>الهندسة المعلوماتية والحاسوب والذكاء الاصطناعي والاتصالات والبرمجيات</td><td class="n">75%</td></tr>
+        <tr><td>الصناعية: الاتصالات، التقنيات الإلكترونية، الإلكترونيات. والمهنية للاتصالات (اتصالات سلكية، مقاسم هاتفية)</td><td>هندسة الاتصالات</td><td class="n">75%</td></tr>
+        <tr><td>الصناعية: الميكاترونكس</td><td>هندسة الميكاترونكس</td><td class="n">75%</td></tr>
+        <tr><td>الصناعية: صيانة الأجهزة الطبية</td><td>الهندسة الطبية</td><td class="n">75%</td></tr>
+        <tr><td>المهنية النفطية: إنتاج نفط وغاز، حفر آبار، ميكانيك آلات منجمية</td><td>هندسة البترول</td><td class="n">75%</td></tr>
+        <tr><td>التجارية (كل المهن)</td><td>كليات العلوم الإدارية والمالية والاقتصاد والمحاسبة</td><td class="n">55%</td></tr>
+        <tr><td>الصناعية: مهن الحاسوب والاتصالات والكهرباء</td><td>المعاهد التقانية الهندسية والحاسوبية</td><td class="n">55%</td></tr>
+        <tr><td>كل المهن</td><td>التصميم الغرافيكي، التصميم الداخلي، التمثيل والإخراج (+ النجاح في اختبار القبول)</td><td class="n">55%</td></tr>
+        <tr><td>المهنية للنقل البحري وكل المهن</td><td>النقل الدولي واللوجستيات (الأكاديمية العربية)</td><td class="n">55%</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<section class="block" id="exams">
+  <div class="container">
+    <h2>الاختبارات والشروط الخاصة</h2>
+    <p class="sub">بعض الاختصاصات تحتاج اجتياز اختبار قبل تدوين الرغبة أو بعد القبول. هذه أهم ما ورد في الإعلانات.</p>
+    <div class="panel"><table>
+      <thead><tr><th>الاختصاص</th><th>الاختبار</th><th>الموعد</th></tr></thead>
+      <tbody>
+        <tr><td>الفنون المسرحية والإخراج السينمائي – الجامعة العربية الدولية الخاصة</td><td>اختبار قبول: تمثيل مشهد وقراءة مقطع وتمارين جسدية وأسئلة ثقافية (للتمثيل)، وفيلم قصير وسيناريو وصور فوتوغرافية وحوار (للإخراج). الشرط: 50% من معدل الثانوية السورية (علمي أو أدبي) أو 55% للمهنية وغير السورية.</td><td>التسجيل عبر التطبيق من 4 إلى 11/10/2026. الاختبار من 10 إلى 14/10/2026 في مقر الجامعة.</td></tr>
+        <tr><td>قسم التمثيل (فنون الأداء) – جامعة المنارة</td><td>اختبار قبول، بنفس شروط المعدل أعلاه.</td><td>التسجيل عبر التطبيق من 4 إلى 11/10/2026. الاختبار من 10 إلى 14/10/2026 في مقر الجامعة.</td></tr>
+        <tr><td>المعهد التقاني للفنون التطبيقية – دمشق</td><td>اختبار، والنجاح فيه شرط لتدوين الرغبة.</td><td>الأربعاء 14 والخميس 15/10/2026</td></tr>
+        <tr><td>معهد الآثار والمتاحف – دمشق</td><td>اختبار، والنجاح فيه شرط لتدوين الرغبة.</td><td>من 7 إلى 15/10/2026</td></tr>
+        <tr><td>التربية الموسيقية – حمص</td><td>اختبار موسيقي، والنجاح فيه شرط لتدوين الرغبة.</td><td>من 11 إلى 15/10/2026</td></tr>
+        <tr><td>الهندسة المعمارية (الجامعات الخاصة)، والفنون الجميلة، والتربية الرياضية</td><td>اختبارات مقررة لها، تفاصيلها في الإعلان رقم 1. لا يُسمح بتدوين الرغبة قبل اجتياز الاختبار بنجاح، ولا تُعتبر مسابقات الجامعات الخاصة بديلاً عنها.</td><td>راجع الإعلان رقم 1 على موقع الوزارة.</td></tr>
+        <tr><td>الاختصاصات الشرعية والمعاهد المتوسطة الشرعية</td><td>شرط حيازة 60% في التربية الدينية و60% في اللغة العربية (على الاختصاصات الشرعية بعد إضافة درجات المواد الشرعية).</td><td>—</td></tr>
+        <tr><td>الإعلام – دمشق</td><td>شرط حيازة 80% في اللغة الأجنبية و80% في اللغة العربية.</td><td>—</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<section class="block" id="military">
+  <div class="container">
+    <h2>الجامعات العسكرية والأمنية</h2>
+    <p class="sub">هذه الجهات تجري امتحان قبول خاصاً بها، واجتيازه شرط لتدوين أي رغبة فيها. الأرقام نسب مئوية من معدل الثانوية.</p>
+    <div class="panel"><table>
+      <thead><tr><th>الجهة</th><th>الكلية أو المعهد</th><th>الحد الأدنى</th><th>الفرع</th></tr></thead>
+      <tbody>
+        <tr><td>الجامعة السورية للعلوم الأمنية</td><td>كلية الأمن السيبراني (ذكور وإناث)</td><td class="n">85%</td><td>علمي</td></tr>
+        <tr><td>الجامعة السورية للعلوم الأمنية</td><td>كلية العلوم الأمنية (ذكور)</td><td class="n">80%</td><td>علمي</td></tr>
+        <tr><td>الجامعة السورية للعلوم الأمنية</td><td>كلية العلوم الأمنية (ذكور)</td><td class="n">75%</td><td>أدبي</td></tr>
+        <tr><td>الجامعة السورية للعلوم الأمنية</td><td>المعهد التقاني للعلوم الأمنية (ذكور) والمعهد التقاني للأمن السيبراني (ذكور وإناث)</td><td class="n">65%</td><td>علمي</td></tr>
+        <tr><td>الجامعة السورية للعلوم الأمنية</td><td>المعهد التقاني للعلوم الأمنية (ذكور)</td><td class="n">60%</td><td>أدبي</td></tr>
+        <tr><td>الجامعة الوطنية للعلوم الدفاعية</td><td>المعهد العالي للعلوم التطبيقية والتكنولوجيا (دمشق وفرع حلب): الهندسة الكيميائية، الإلكترونية، المعلوماتية، الطيران</td><td class="n">85%</td><td>علمي</td></tr>
+        <tr><td>الجامعة الوطنية للعلوم الدفاعية</td><td>الحربية البرية بحمص (ميكانيك، إلكترونيك، معلوماتية، ميكاترونكس)، الحربية الجوية بحلب (هندسة الطيران)، الحربية البحرية (الهندسة البحرية)، كلية العلوم الإنسانية والإدارية (إدارة واقتصاد) — ذكور فقط</td><td class="n">70%</td><td>علمي</td></tr>
+        <tr><td>الجامعة الوطنية للعلوم الدفاعية</td><td>كلية العلوم الإنسانية والإدارية: علوم قانونية، العلوم الاجتماعية — دمشق (ذكور فقط)</td><td class="n">70%</td><td>أدبي</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<section class="block faq" id="faq">
+  <div class="container">
+    <h2>أسئلة شائعة</h2>
+    <p class="sub">إجابات قصيرة على أكثر ما يسأل عنه الطلاب.</p>
+    <details><summary>ما الفرق بين الحد الأدنى وعلامة القبول؟</summary><div class="ans">الحد الأدنى هو أقل نسبة تسمح لك بتدوين الرغبة. أما القبول فيتم بالتفاضل بين المتقدّمين على أساس المجموع التفاضلي، لذلك تُحدَّد العلامات الفعلية بعد انتهاء التقديم وحسب أعداد المتقدّمين وعلاماتهم.</div></details>
+    <details><summary>ماذا تعني الأعمدة: عامة، موازي، هيئة تدريسية؟</summary><div class="ans">لكل اختصاص حدود تختلف حسب نوع المفاضلة: <b>المفاضلة العامة</b> هي المسار المعتاد، و<b>التعليم الموازي</b> مسار مستقل له حدّه الخاص، و<b>الهيئة التدريسية</b> مفاضلة مخصّصة لفئة خاصة، وهناك أيضاً مفاضلة لذوي الإعاقة لها شروط خاصة في الإعلانات الأصلية. هذا الموقع يعرض الأعمدة الثلاثة الأولى فقط.</div></details>
+    <details><summary>ما معنى «لأبناء المحافظة» و«لباقي المحافظات»؟</summary><div class="ans">في بعض المحافظات (مثل درعا والسويداء والقنيطرة ودير الزور والحسكة والرقة) توجد صفوف منفصلة بحدود مختلفة: صف لأبناء المحافظة نفسها، وصف لطلاب المحافظات الأخرى. وفي بعض الاختصاصات صف خاص لأبناء المحافظات الشرقية (دير الزور والحسكة والرقة).</div></details>
+    <details><summary>ماذا يحدث إذا تساوى المجموع بين طالبين؟</summary><div class="ans"><div class="tw"><table>
+      <thead><tr><th>الكلية</th><th>تُعتمد المواد بالترتيب</th></tr></thead><tbody>
+      <tr><td>الطب البشري، طب الأسنان، الصيدلة، التجميل، العلاج الوظيفي والفيزيائي، العلوم الصحية، التمريض، القبالة، التغذية العلاجية</td><td>العلوم ثم الكيمياء ثم اللغة الأجنبية</td></tr>
+      <tr><td>الهندسة المعلوماتية</td><td>الرياضيات ثم اللغة الأجنبية ثم الفيزياء</td></tr>
+      <tr><td>الهندسة الكيميائية، هندسة البترول</td><td>الرياضيات ثم الكيمياء ثم اللغة الأجنبية</td></tr>
+      <tr><td>الهندسة الطبية</td><td>الفيزياء ثم الرياضيات ثم العلوم</td></tr>
+      <tr><td>هندسة الحاسوب والحاسبات والاتصالات والميكاترونكس والكهربائية والمدنية</td><td>الرياضيات ثم الفيزياء ثم اللغة الأجنبية</td></tr>
+      <tr><td>الهندسة المعمارية، الاقتصاد، التمويل والبنوك، العلوم المالية والمصرفية، المحاسبة، العلوم (رياضيات)</td><td>الرياضيات ثم اللغة الأجنبية</td></tr>
+      <tr><td>العلوم (فيزياء)</td><td>الفيزياء ثم الرياضيات</td></tr>
+      <tr><td>العلوم (كيمياء)</td><td>الكيمياء ثم الفيزياء</td></tr>
+      <tr><td>اللوجستيات والنقل الدولي، إدارة المشافي، إدارة الأعمال، العلوم الإدارية، التسويق والتجارة الإلكترونية</td><td>اللغة الأجنبية ثم اللغة العربية</td></tr>
+      <tr><td>العلاقات الدولية والدبلوماسية، الإعلام، التربية، الفنون</td><td>اللغة العربية ثم اللغة الأجنبية</td></tr>
+      <tr><td>السياحة</td><td>اللغة الأجنبية</td></tr>
+      <tr><td>الحقوق</td><td>اللغة العربية</td></tr>
+      <tr><td>الاختصاصات الشرعية، كلية اللاهوت</td><td>التربية الدينية ثم اللغة العربية</td></tr>
+      <tr><td>التربية الرياضية</td><td>العلمي (العلوم)</td></tr>
+      <tr><td>الجغرافية</td><td>العلمي (الرياضيات) والأدبي (الجغرافية)</td></tr>
+      <tr><td>التاريخ</td><td>التاريخ ثم اللغة العربية</td></tr>
+      </tbody></table></div>وإذا تساوت علامات المواد أيضاً، تكون الأولوية للأصغر سناً (سنة ثم شهر ثم يوم).</div></details>
+    <details><summary>هل أستطيع التقدّم لأكثر من جامعة؟</summary><div class="ans">تدوّن كل رغباتك (حكومية وخاصة) في بطاقة واحدة، دون حدّ لعدد الرغبات. لكن من يُقبل في إحدى رغباته يُعتبر قبوله <b>نهائياً</b>، ولا يحق له التقدّم إلى مفاضلات أخرى لاحقة (عدا التعليم المفتوح أو الافتراضي). ومن يرفض رغبته بنتيجة المفاضلة لن تُسوّى وضعه ولن يُقبل في رغبة أخرى حتى لو حقق شروطها. لذلك اكتب عدداً كافياً من الرغبات.</div></details>
+    <details><summary>كيف يُحسب المجموع للمفاضلة؟</summary><div class="ans">يتم التفاضل على أساس المجموع التفاضلي للطالب ولغة التفاضل الأعلى. ويُحسب المجموع من 2400 للفرع العلمي ومن 2200 للفرع الأدبي، ثم يُحوَّل إلى نسبة مئوية.</div></details>
+    <details><summary>ماذا عن الشهادات غير السورية والمهنية؟</summary><div class="ans"><ul>
+      <li>حاملو الشهادة الثانوية غير السورية يراجعون دائرة الامتحانات في مديرية التربية بأي محافظة لمعادلة شهادتهم واعتماد بياناتهم قبل التقدّم.</li>
+      <li>خريجو الثانوية المهنية يتقدّمون وفق الجدول رقم 3 (انظر قسم الجامعات الخاصة أعلاه).</li>
+      <li>يُسمح للطلاب العرب والأجانب والفلسطينيين المقيمين في سوريا (حسب شروط تاريخ اللجوء وتسلسل الدراسة داخل سوريا) بالتقدّم، ويُعاملون معاملة الطلاب السوريين في القبول والرسوم.</li></ul></div></details>
+    <details><summary>أين أجد الإعلانات الأصلية؟</summary><div class="ans">على الموقع الرسمي لوزارة التعليم العالي والبحث العلمي: <a href="https://www.mohe.gov.sy" target="_blank" rel="noopener">www.mohe.gov.sy</a>، وعلى صفحتها في فيسبوك <a href="https://www.facebook.com/SyMOHEASR" target="_blank" rel="noopener">SyMOHEASR</a> وقناتها في تلغرام <a href="https://t.me/SyMOHEASR" target="_blank" rel="noopener">SyMOHEASR</a>.</div></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><b>تنبيه:</b> هذا موقع تعريفي لمساعدة الطلاب، وليس موقعاً رسمياً. المرجع الوحيد هو إعلانات وزارة التعليم العالي والبحث العلمي (الإعلانات 2 و4 و7 للعام الدراسي 2026 – 2027).</p>
+    <p>نقلنا الأرقام الواضحة من الملفات، وأي خانة لم تكن مقروءة بوضوح تركناها وأشرنا لها. تأكّد دائماً من الإعلان الأصلي قبل تدوين رغباتك.</p>
+    <p>الموقع الرسمي: <a href="https://www.mohe.gov.sy" target="_blank" rel="noopener">www.mohe.gov.sy</a></p>
+  </div>
+</footer>
+
+<script>
+/* بيانات الجامعات الحكومية — الحدود الدنيا للتقدم (عامة / موازي / هيئة تدريسية)
+   الصيغة: اسم الاختصاص: مدينة[@a|@o|@e] عامة موازي هيئة; ... | ملاحظة
+   @a أبناء المحافظة، @o باقي المحافظات، @e أبناء المحافظات الشرقية، و - تعني لا يوجد */
+const PUB_SCI = `
+#السنة التحضيرية (الطب والأسنان والصيدلة)
+السنة التحضيرية للكليات الطبية: حسب اختيار الطالب 94.5 92 75; حسب اختيار الطالب@e 90 85 -
+#هندسة المعلوماتية والاتصالات
+الهندسة المعلوماتية: دمشق 85 80 60; حلب 84 79 60; اللاذقية 84 79 60; إدلب 80 75 60; حماة 80 75 60; دير الزور@e 80 75 -; دير الزور@o 80 75 60
+الهندسة المعلوماتية (البرمجيات): حمص 84 80 60
+الهندسة المعلوماتية (الشبكات والنظم الحاسوبية): حمص 84 80 60
+الهندسة المعلوماتية (الذكاء الاصطناعي): حمص 84 80 60
+هندسة الإلكترونيات والاتصالات: دمشق 80 72 60; حمص 80 75 60
+هندسة الاتصالات والإلكترونيات: اللاذقية 80 72 60
+هندسة الاتصالات: حلب 80 72 60
+الهندسة الكهربائية (الاتصالات والإلكترونيات): إدلب 75 70 60
+هندسة الحواسيب والأتمتة: دمشق 75 70 60
+هندسة الحواسيب: حلب 75 65 60
+هندسة الحاسبات والتحكم الآلي: اللاذقية 75 70 60
+هندسة التحكم الآلي والحواسيب: حمص 75 70 60
+هندسة التحكم الآلي والأتمتة الصناعية: حلب 72 65 60
+هندسة الإلكترونيات: حلب 75 70 60
+هندسة تكنولوجيا المعلومات والاتصالات: طرطوس 75 68 60
+#الهندسة المدنية والمعمارية
+الهندسة المدنية: دمشق 80 75 60; حلب 78 67 60; اللاذقية 78 67 60; حمص 78 67 60; حماة 75 67 60; إدلب 72 67 60; الحسكة@e 72 67 -; الحسكة@o 72 67 60; الرقة@e 72 67 -; الرقة@o 72 67 60
+الهندسة المساحية والجيوماتية: اللاذقية 72 67 60
+الهندسة المعمارية: دمشق 75 70 60; حلب 75 70 60; اللاذقية 75 70 60; حمص 75 70 60; حماة/السلمية 75 70 60; طرطوس 75 70 60; إدلب 75 70 60; دير الزور@e 75 70 -; دير الزور@o 75 70 60
+#الهندسة الكهربائية والميكانيكية
+هندسة الطاقة الكهربائية: دمشق 72 67 60; السويداء@a 70 65 -; السويداء@o 70 65 60; اللاذقية 70 65 60; حمص 72 68 60; حماة 72 68 60
+هندسة نظم القدرة الكهربائية: حلب 72 65 60
+هندسة القيادة الكهربائية: حلب 72 65 60
+الهندسة الكهربائية (القدرة الكهربائية): إدلب 70 65 60
+هندسة التصميم الميكانيكي: دمشق 72 67 60
+هندسة التصميم والإنتاج: اللاذقية 72 68 60; حمص 72 68 60; حماة 72 68 60
+هندسة التصميم الميكانيكي والإنتاج: دير الزور@e 67 63 -; دير الزور@o 67 63 60
+الهندسة الطبية: دمشق 80 75 60; اللاذقية 80 75 60
+هندسة الميكانيك العام: دمشق 72 67 60
+الهندسة الميكانيكية (الميكانيك العام): إدلب 70 62 60
+الهندسة الميكانيكية (الميكاترونيكس): إدلب 70 62 60
+هندسة ميكانيك الصناعات النسيجية وتقاناتها: دمشق 72 67 60
+هندسة ميكانيك الغزل والنسيج: حلب 68 60 60
+هندسة الغزل والنسيج: حمص 70 65 60
+هندسة السيارات والآليات الثقيلة: دمشق 72 67 60
+هندسة القوى الميكانيكية: السويداء 70 65 60; اللاذقية 72 68 60; حمص 72 68 60
+هندسة الميكاترونيك: حلب 72 65 60; اللاذقية 72 68 60; حمص 72 68 60
+الهندسة النووية: حلب 72 65 60
+هندسة الإنتاج: حلب 72 65 60
+هندسة الطيران: حلب 72 65 60
+هندسة الطاقة (الميكانيكية): حلب 72 65 60
+هندسة علم المواد الهندسية: حلب 68 60 60
+هندسة الآلات الزراعية: حلب 68 60 60
+هندسة صناعية: حلب 68 60 60
+الهندسة البحرية: اللاذقية 72 68 60
+هندسة المعادن: حمص 72 68 60
+#الهندسة الكيميائية والتقنية
+الهندسة البترولية: حمص 75 68 60; دير الزور@e 65 60 -; دير الزور@o 65 60 60
+الهندسة الكيميائية: حمص 75 68 60
+الهندسة الغذائية: حمص 75 68 60
+هندسة الصناعات البتروكيميائية: دير الزور@e 65 60 -; دير الزور@o 65 60 60
+الهندسة التقنية (تقانات الهندسة البيئية): حلب 70 63 60
+الهندسة التقنية (تكنولوجيا الأغذية): حلب 70 63 60
+الهندسة التقنية (تقانات الهندسة الحيوية): حلب 70 63 60
+الهندسة التقنية (المكننة الزراعية): طرطوس 70 63 60
+الهندسة التقنية (تقانة الأغذية): طرطوس 70 63 60
+الهندسة التقنية (معدات وآليات): طرطوس 70 63 60
+الهندسة التقنية (أتمتة صناعية): طرطوس 70 63 60
+الهندسة التقنية (طاقات متجددة): طرطوس 70 63 60
+#الكلية التطبيقية
+الكلية التطبيقية (تقنيات حاسوب): دمشق 70 60 50; اللاذقية 70 60 50; حمص 70 60 50; حماة 70 60 50
+الكلية التطبيقية (ميكاترونكس): دمشق 70 60 50
+الكلية التطبيقية (طاقات متجددة - طاقة شمسية): دمشق 70 60 50
+الكلية التطبيقية (تقنيات إلكترونية): حلب 70 60 50
+الكلية التطبيقية (تدفئة وتبريد وتكييف): حلب 70 60 50; اللاذقية 70 60 50; حمص 70 60 50
+الكلية التطبيقية (اتصالات): اللاذقية 70 60 50
+الكلية التطبيقية (التغذية الكهربائية للمنشآت الصناعية والمدن): اللاذقية 70 60 50; حماة 70 60 50
+الكلية التطبيقية (ميكانيك مركبات): اللاذقية 70 60 50
+الكلية التطبيقية (تصنيع ميكانيكي): اللاذقية 70 60 50
+الكلية التطبيقية (تقانات الأجهزة الطبية): اللاذقية 70 60 50
+#الطب البيطري والزراعة
+الطب البيطري: درعا@a 65 60 -; درعا@o 65 60 55; إدلب 65 60 55; حماة 68 63 55; دير الزور@e 65 60 -; دير الزور@o 65 60 55
+الهندسة الزراعية: دمشق 70 62 55; السويداء@a 65 60 -; السويداء@o 65 60 55; القنيطرة@a 65 60 -; القنيطرة@o 65 60 55; حلب 70 62 55; إدلب 65 60 55; اللاذقية 70 62 55; طرطوس 65 60 55; حمص 70 62 55; حماة/السلمية 65 60 55; دير الزور@a 60 55 -; دير الزور@o 60 55 55; الحسكة@a 60 55 -; الحسكة@o 60 55 55; الرقة@a 60 55 -; الرقة@o 60 55 55
+#الاقتصاد
+الاقتصاد: دمشق 75 62 50; درعا@a 60 55 -; درعا@o 60 55 50; القنيطرة@a 60 55 -; القنيطرة@o 60 55 50; السويداء@a 60 55 -; السويداء@o 60 55 50; حلب 68 60 50; حلب/اعزاز 55 50 50; حلب/منبج 55 50 50; اللاذقية 70 60 50; حمص 70 60 50; طرطوس 65 55 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50
+الاقتصاد (تمويل ومصارف): حماة 65 55 50
+الاقتصاد والإدارة: إدلب 55 50 50; إدلب/الدانا 55 50 50
+#العلوم الأساسية
+العلوم (علم الحياة): دمشق 65 55 50; درعا@a 55 50 -; درعا@o 55 50 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حلب 65 55 50; حلب/عين العرب 55 50 50; إدلب 60 55 50; اللاذقية 65 55 50; حمص 60 55 50; طرطوس 60 55 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الحسكة/القامشلي@a 55 50 -; الحسكة/القامشلي@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50 | الأرقام للمفاضلة بالمجموع. يمكن أيضاً المفاضلة على العلامة الاختصاصية (تخصيص) بشرط نسبة في مادة العلوم تتراوح بين 60% و75% حسب الجامعة، راجع الإعلان.
+العلوم (الجيولوجيا): دمشق 65 55 50; حلب 60 50 50; اللاذقية 60 50 50; حمص 60 50 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50
+العلوم (الرياضيات): دمشق 60 55 50; القنيطرة@a 55 50 -; القنيطرة@o 55 50 50; درعا@a 55 50 -; درعا@o 55 50 50; حلب 60 55 50; حلب/عين العرب 55 50 50; إدلب 55 50 50; اللاذقية 60 55 50; حمص 60 55 50; حماة/مصياف 55 50 50; طرطوس 55 50 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الحسكة/القامشلي@a 55 50 -; الحسكة/القامشلي@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50 | الأرقام للمفاضلة بالمجموع، ويُشترط للتفاضل على المجموع العام 65% في الرياضيات (60% للموازي). وبالتخصيص (العلامة الاختصاصية): 75% في الرياضيات للعامة و70% للموازي، وتنخفض إلى 65% و60% في بعض صفوف أبناء المحافظات الشرقية.
+العلوم (الفيزياء): دمشق 60 55 50; حلب 60 55 50; حلب/عين العرب 55 50 50; إدلب 55 50 50; اللاذقية 60 55 50; حمص 60 55 50; حماة/مصياف 55 50 50; طرطوس 55 50 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50; الحسكة/القامشلي@e 55 50 -; الحسكة/القامشلي@o 55 50 50 | المفاضلة بالمجموع، أو بالعلامة الاختصاصية (تخصيص) بشرط نسبة في الفيزياء، راجع الإعلان.
+العلوم (الكيمياء): دمشق 60 55 50; حلب 60 55 50; حلب/عين العرب 55 50 50; إدلب 55 50 50; اللاذقية 60 55 50; حمص 60 55 50; طرطوس 55 50 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50; الحسكة/القامشلي@e 55 50 -; الحسكة/القامشلي@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50 | المفاضلة بالمجموع، أو بالعلامة الاختصاصية (تخصيص) بشرط نسبة في الكيمياء، راجع الإعلان.
+العلوم (الإحصاء الرياضي): دمشق 60 55 50; حلب 60 55 50; اللاذقية 60 55 50; حمص 60 55 50 | يُشترط الحصول على 60% في الرياضيات.
+#العلوم الصحية والتمريض
+العلوم الصحية (تقويم الكلام واللغة): دمشق 80 70 60
+العلوم الصحية (السمعيات): دمشق 80 70 60
+العلوم الصحية (علاج وظيفي): دمشق 80 70 60
+العلوم الصحية (علم النفس): دمشق 80 70 60
+العلوم الصحية (الأطراف الاصطناعية والأجهزة التقويمية): دمشق 80 70 60
+العلوم الصحية (التشخيص والعلاج الشعاعي): دمشق 80 70 60
+العلوم الصحية (إدارة معلومات صحية): دمشق 80 70 60
+العلوم الصحية: حلب 80 62 60
+العلوم الصحية (تغذية): حمص 80 62 60
+العلوم الصحية (مخابر): حمص 80 62 60
+العلوم الصحية (معالجة فيزيائية): حمص 80 62 60
+العلوم الصحية (التخدير): إدلب 75 60 60
+العلوم الصحية (التحليل المخبري): إدلب 75 60 60
+العلوم الصحية (الطوارئ): إدلب 75 60 60
+العلوم الصحية (التمريض): إدلب 75 60 60
+العلوم الصحية (العلاج الفيزيائي): إدلب 75 60 60
+العلوم الصحية (القبالة - إناث فقط): إدلب 75 60 60
+العلوم البيئية: دمشق 60 55 50
+التمريض: حلب 65 60 55; اللاذقية 65 60 55; حماة 65 60 55; دير الزور@e 60 55 -; دير الزور@o 60 55 55
+#اللغات (لخريجي العلمي)
+اللغة العربية: دمشق 75 70 50+75; القنيطرة@a 75 70 -; القنيطرة@o 75 70 50+75; درعا@a 75 70 -; درعا@o 75 70 50+75; السويداء@a 75 70 -; السويداء@o 75 70 50+75; حلب 75 70 50+75; حلب/اعزاز 75 70 50+75; حلب/منبج 75 70 50+75; حلب/عين العرب 75 70 50+75; إدلب 75 70 50+75; إدلب/الدانا 75 70 50+75; اللاذقية 75 70 50+75; حمص 75 70 50+75; حماة 75 70 50+75; طرطوس 75 70 50+75; دير الزور@a 75 60 -; دير الزور@o 75 70 50+75; الحسكة@a 75 60 -; الحسكة@o 75 70 50+75; الحسكة/القامشلي@a 75 60 -; الحسكة/القامشلي@o 75 70 50+75; الرقة@a 75 60 -; الرقة@o 75 70 50+75 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة. القبول وفق العلامة الاختصاصية.
+اللغة الإنكليزية: دمشق 80 70 50+80; درعا@a 80 70 -; درعا@o 80 70 50+80; حلب 80 70 50+80; حلب/اعزاز 80 70 50+80; حلب/منبج 80 70 50+80; حلب/عين العرب 80 70 50+80; إدلب 80 70 50+80; إدلب/الدانا 80 70 50+80; اللاذقية 80 70 50+80; طرطوس 80 70 50+80; حمص 80 70 50+80; حماة 80 70 50+80; دير الزور@e 80 70 -; دير الزور@o 80 70 50+80 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة. القبول وفق العلامة الاختصاصية.
+اللغة الفرنسية: دمشق 80 70 50+80; السويداء@a 80 70 -; السويداء@o 80 70 50+80; حلب 80 70 50+80; اللاذقية 80 70 50+80; حمص 80 70 50+80; طرطوس 80 70 50+80; دير الزور@e 80 70 -; دير الزور@o 80 70 50+80; الحسكة@e 80 70 -; الحسكة@o 80 70 50+80 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة. القبول وفق العلامة الاختصاصية.
+اللغة الروسية: دمشق 60 60 50+60 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة. القبول وفق العلامة الاختصاصية.
+#الحقوق والإعلام (لخريجي العلمي)
+الحقوق: دمشق 60 55 50; درعا@a 55 50 -; درعا@o 55 50 50; القنيطرة@a 55 50 -; القنيطرة@o 55 50 50; حلب 55 50 50; حلب/اعزاز 55 50 50; إدلب 55 50 50; اللاذقية 60 52 50; حمص 60 52 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50
+الإعلام: دمشق 65 60 50 | يُشترط الحصول على 80% في اللغة الأجنبية و80% في اللغة العربية.
+`;
+
+const PUB_LIT = `
+#الحقوق والإعلام
+الحقوق: دمشق 75 70 50; درعا@a 65 55 -; درعا@o 65 55 50; القنيطرة@a 65 55 -; القنيطرة@o 65 55 50; حلب 65 60 50; حلب/اعزاز 60 55 50; إدلب 60 55 50; اللاذقية 65 60 50; حمص 65 60 50; دير الزور@a 60 55 -; دير الزور@o 60 55 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50
+الإعلام: دمشق 75 70 50 | يُشترط الحصول على 80% في اللغة الأجنبية و80% في اللغة العربية.
+#اللغات
+اللغة العربية: دمشق 75 65 50+75; القنيطرة@a 75 65 -; القنيطرة@o 75 65 50+75; درعا@a 75 65 -; درعا@o 75 65 50+75; السويداء@a 75 65 -; السويداء@o 75 65 50+75; حلب 75 65 50+75; حلب/اعزاز 75 65 50+75; حلب/منبج 75 65 50+75; حلب/عين العرب 75 65 50+75; إدلب 75 65 50+75; إدلب/الدانا 75 65 50+75; اللاذقية 75 65 50+75; حمص 75 65 50+75; حماة 75 65 50+75; طرطوس 75 65 50+75; دير الزور@a 70 60 -; دير الزور@o 75 65 50+75; الحسكة@a 70 60 -; الحسكة@o 75 65 50+75; الحسكة/القامشلي@a 70 60 -; الحسكة/القامشلي@o 75 65 50+75; الرقة@a 70 60 -; الرقة@o 75 65 50+75 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة.
+اللغة الإنكليزية: دمشق 75 70 50+75; درعا@a 75 70 -; درعا@o 75 70 50+75; حلب 75 70 50+75; حلب/اعزاز 75 70 50+75; حلب/منبج 75 70 50+75; حلب/عين العرب 75 70 50+75; إدلب 75 70 50+75; إدلب/الدانا 75 70 50+75; اللاذقية 75 70 50+75; طرطوس 75 70 50+75; حمص 75 70 50+75; حماة 75 70 50+75; دير الزور@e 75 70 -; دير الزور@o 75 70 50+75 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة.
+اللغة الفرنسية: دمشق 75 70 50+75; السويداء@a 75 70 -; السويداء@o 75 70 50+75; حلب 75 70 50+75; اللاذقية 75 70 50+75; حمص 75 70 50+75; طرطوس 75 70 50+75; دير الزور@e 75 70 -; دير الزور@o 75 70 50+75; الحسكة@e 75 70 -; الحسكة@o 75 70 50+75 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة.
+اللغة الروسية: دمشق 60 60 50+60 | {L} الأرقام حدّ أدنى في مادة اللغة (عامة وموازي)، وفي الهيئة التدريسية 50% من المجموع مع نسبة في المادة. القبول وفق العلامة التخصصية.
+اللغة التركية: دمشق 60 55 50; حلب 60 55 50
+اللغة الفارسية: دمشق 55 50 50; حلب 55 50 50; حمص 55 50 50
+اللغة الكردية: حلب/عين العرب 55 50 50; الحسكة/القامشلي@e 55 50 50; الحسكة/القامشلي@o 55 50 50
+الترجمة (القامشلي): الحسكة/القامشلي@e 55 50 50; الحسكة/القامشلي@o 55 50 50
+#العلوم الإنسانية والاجتماعية
+الفلسفة: دمشق 70 65 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حلب 60 55 50; حلب/عين العرب 55 50 50; اللاذقية 65 60 50; حمص 65 60 50; الحسكة/القامشلي@e 55 50 50; الحسكة/القامشلي@o 55 50 50
+علم الاجتماع: دمشق 65 60 50; السويداء@a 55 50 -; السويداء@o 55 50 50; درعا@a 55 50 -; درعا@o 55 50 50; حلب 60 55 50; حلب/عين العرب 55 50 50; حلب/اعزاز 55 50 50; اللاذقية 65 55 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50; الحسكة/القامشلي@e 55 50 -; الحسكة/القامشلي@o 55 50 50
+الجينولوجيا (علم المرأة): حلب/عين العرب 55 50 50; الحسكة/القامشلي@e 55 50 50; الحسكة/القامشلي@o 55 50 50
+المكتبات والمعلومات: دمشق 65 60 50; اللاذقية 62 52 50
+الجغرافية: دمشق 65 60 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حلب 60 55 50; حلب/اعزاز 55 50 50; حلب/عين العرب 55 50 50; إدلب 55 50 50; اللاذقية 55 50 50; طرطوس 55 50 50; حماة 55 50 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50; الحسكة/القامشلي@e 55 50 -; الحسكة/القامشلي@o 55 50 50
+التاريخ: دمشق 65 60 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حلب 55 50 50; حلب/اعزاز 55 50 50; حلب/عين العرب 55 50 50; إدلب 55 50 50; اللاذقية 60 55 50; حمص 60 55 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50; الحسكة/القامشلي@a 55 50 -; الحسكة/القامشلي@o 55 50 50
+الآثار: دمشق 65 60 50; السويداء@a 60 50 -; السويداء@o 60 50 50; حلب 60 55 50; الحسكة@e 55 50 -; الحسكة@o 55 50 50
+العلوم السياسية: دمشق 65 60 -; إدلب 65 60 -
+#التربية
+التربية (المناهج وطرائق التدريس): دمشق 62 52 50; حلب 62 52 50; حمص 62 52 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50
+التربية (المناهج وتقنيات التعليم): اللاذقية 62 52 50; الحسكة/القامشلي@e 55 50 -; الحسكة/القامشلي@o 55 50 50
+التربية (علم النفس): دمشق 70 60 50; حمص 68 60 50; القنيطرة@a 60 55 -; القنيطرة@o 60 55 50
+التربية الخاصة: دمشق 65 60 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حماة 60 55 50; حلب/اعزاز 55 50 50
+التربية (الإرشاد النفسي): دمشق 68 60 50; درعا@a 55 50 -; درعا@o 55 50 50; السويداء@a 55 50 -; السويداء@o 55 50 50; حلب 62 52 50; حلب/اعزاز 55 50 50; إدلب 55 50 50; اللاذقية 65 52 50; حمص 65 52 50; طرطوس 62 52 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50
+التربية (رياض الأطفال - إناث فقط): دمشق 70 65 50; درعا@a 55 50 -; درعا@o 55 50 50; القنيطرة@a 55 50 -; القنيطرة@o 55 50 50; حلب/عين العرب 55 50 50; حمص 65 55 50; دير الزور@a 55 50 -; دير الزور@o 55 50 50; الحسكة@a 55 50 -; الحسكة@o 55 50 50; الرقة@a 55 50 -; الرقة@o 55 50 50
+#الشريعة
+الشريعة (القرآن والحديث): دمشق 55 50 50; حلب 55 50 50; حمص 55 50 50; إدلب 55 50 50; إدلب/الدانا 55 50 50 | بشرط 60% في التربية الدينية و60% في اللغة العربية بعد إضافة درجات المواد الشرعية.
+الشريعة (الفقه الإسلامي وأصوله): دمشق 55 50 50; حلب 55 50 50; اللاذقية 55 50 50; حماة 55 50 50; دير الزور@e 55 50 -; دير الزور@o 55 50 50; إدلب 55 50 50; إدلب/الدانا 55 50 50 | بشرط 60% في التربية الدينية و60% في اللغة العربية بعد إضافة درجات المواد الشرعية.
+الشريعة (الشريعة والقانون): دمشق 55 50 50; حلب 55 50 50; إدلب 55 50 50 | بشرط 60% في التربية الدينية و60% في اللغة العربية بعد إضافة درجات المواد الشرعية.
+الشريعة (اقتصاد ومصارف إسلامية): دمشق 55 50 50
+الشريعة (العقيدة والفلسفة الإسلامية والأديان): دمشق 55 50 50
+الشريعة (التربية الإسلامية): دمشق 55 50 50
+#السياحة والفنون
+السياحة: دمشق 70 65 50; حمص 65 60 50; طرطوس 65 60 50
+الفنون الجميلة: دمشق 50 50 50; السويداء 50 50 50; اللاذقية 50 50 50 | يتطلب اجتياز اختبار القبول.
+الفنون الجميلة التطبيقية: حلب 50 50 50 | يتطلب اجتياز اختبار القبول.
+التربية الرياضية: اللاذقية 50 - -; حماة 50 - - | يتطلب اجتياز اختبار القبول (الإعلان رقم 1).
+التربية الموسيقية: حمص 50 50 50 | اختبار موسيقي من 11 إلى 15/10/2026، والنجاح به شرط لتدوين الرغبة.
+`;
+
+const PUB_INST = `
+#المعاهد التقانية الطبية
+المعهد التقاني الطبي – مخابر: دمشق 65 60 -; حلب 65 60 -; اللاذقية 65 60 -
+المعهد التقاني الطبي – تخدير: دمشق 65 60 -; ريف دمشق/النبك 65 60 -; حلب 65 60 -; اللاذقية 65 60 -; حماة 62 58 -
+المعهد التقاني الطبي – أشعة: دمشق 65 60 -; ريف دمشق/النبك 65 60 -; حلب 65 60 -; اللاذقية 65 60 -
+المعهد التقاني الطبي – بصريات: دمشق 62 58 -
+المعهد التقاني الطبي – طب الطوارئ: دمشق 62 58 -; ريف دمشق/النبك 60 55 -; حلب 62 58 -; اللاذقية 60 55 -; حماة 60 55 -
+المعهد التقاني الطبي – معالجة فيزيائية: دمشق 62 58 -; ريف دمشق/النبك 60 55 -; حلب 62 58 -; اللاذقية 60 55 -
+المعهد التقاني الطبي – صيدلة: حلب 62 58 -; اللاذقية 60 55 -
+المعهد التقاني الطبي بجرابلس – تمريض وقبالة وطوارئ وعلاج فيزيائي وعمليات: حلب/جرابلس 55 50 -
+#المعاهد التقانية الصحية
+المعهد التقاني الصحي – مخابر: دمشق 65 60 -; حلب 60 55 -; حمص 60 55 -; طرطوس 60 50 -; دير الزور 60 55 -; الحسكة 60 55 -
+المعهد التقاني الصحي – صيدلة: دمشق 55 50 -; حلب 55 50 -; حمص 55 50 -; طرطوس 55 50 -; دير الزور 60 55 -; الحسكة 55 50 -
+المعهد التقاني الصحي – تخدير: دمشق 65 60 -; حلب 60 55 -; حمص 60 55 -; طرطوس 60 55 -; دير الزور 60 55 -; الحسكة 60 55 -
+المعهد التقاني الصحي – أشعة: دمشق 60 55 -; حلب 60 55 -; حمص 60 55 -; طرطوس 60 55 -; دير الزور 55 50 -; الحسكة 60 55 -
+المعهد التقاني الصحي – معالجة فيزيائية: دمشق 55 50 -; حلب 55 50 -; حمص 55 50 -; طرطوس 55 50 -; دير الزور 55 50 -; الحسكة 55 50 -
+المعهد التقاني الصحي – طب الطوارئ: حلب 55 50 -; حمص 55 50 -; طرطوس 55 50 -; الحسكة 55 50 -
+المعهد التقاني الصحي – أطراف صناعية: دمشق 55 50 -; حمص 55 50 -; طرطوس 55 50 -
+المعهد التقاني الصحي – بصريات: حلب 55 50 -
+المعهد التقاني الصحي – صحة عامة: دمشق 55 50 -
+المعهد التقاني الصحي – إحصاء صحي وحيوي: دمشق 55 50 -
+المعهد التقاني الصحي – صيانة أجهزة طبية: طرطوس 55 50 -
+`;
+/* الجامعات الخاصة — [الاسم، المحافظة، المقر، مقر مؤقت؟] */
+const UNIS = {
+1:["جامعة القلمون الخاصة","ريف دمشق","دير عطية"],
+2:["الجامعة السورية الخاصة","ريف دمشق","الكسوة"],
+3:["جامعة الأندلس الخاصة للعلوم الطبية","طرطوس","القدموس"],
+4:["جامعة الحواش الخاصة","حمص","الحواش"],
+5:["جامعة إيبال الخاصة","إدلب","سراقب"],
+6:["جامعة الشام الخاصة (التل)","ريف دمشق","التل"],
+7:["جامعة الشام الخاصة (كليات اللاذقية)","اللاذقية","اللاذقية"],
+8:["جامعة قرطبة الخاصة (مقر القامشلي)","الحسكة","القامشلي"],
+9:["جامعة قرطبة الخاصة (فرع حلب)","حلب","حلب",1],
+10:["الجامعة العربية الدولية الخاصة","درعا","درعا"],
+11:["الجامعة الدولية الخاصة للعلوم والتكنولوجيا","درعا","درعا"],
+12:["جامعة الوادي الدولية الخاصة","حمص","وادي النضارة"],
+13:["جامعة الجزيرة الخاصة","دير الزور","دير الزور"],
+14:["الجامعة العربية الخاصة للعلوم والتكنولوجيا","حماة","تل قرطل"],
+15:["جامعة الشهباء الخاصة","حلب","تل حدية"],
+16:["جامعة اليرموك الخاصة","درعا","درعا"],
+17:["الجامعة الوطنية الخاصة","حماة","حماة"],
+18:["الجامعة البريطانية في دمشق","درعا","درعا"],
+19:["جامعة قاسيون الخاصة للعلوم والتكنولوجيا","درعا","درعا"],
+20:["جامعة ماري الخاصة","إدلب","حزانو"],
+21:["جامعة المنارة","اللاذقية","اللاذقية",1],
+22:["جامعة أنطاكية السورية الخاصة","ريف دمشق","معرة صيدنايا"],
+23:["الجامعة الدولية للعلوم والنهضة","حلب","أعزاز"],
+24:["الجامعة السورية للعلوم والتكنولوجيا","إدلب","معرة النعمان"],
+25:["جامعة المعارف للعلوم التطبيقية","إدلب","سرمدا"],
+26:["جامعة الشمال الخاصة","إدلب","سرمدا"],
+27:["جامعة الشام العالمية","حلب","أعزاز"],
+28:["جامعة الزيتونة الدولية","حلب","أعزاز"],
+29:["جامعة الاتحاد الخاصة (مقر عالقين)","درعا","عالقين",1],
+30:["جامعة الاتحاد الخاصة (فرع حلب)","حلب","حلب",1],
+31:["الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري (فرع اللاذقية)","اللاذقية","اللاذقية"],
+32:["جامعة الزهراء","حلب","جرابلس"],
+33:["جامعة الرواد للعلوم والتقانة","حلب","جرابلس"],
+34:["جامعة باشاك شهير","حلب","الباب"],
+35:["جامعة الأمانوس الخاصة","حلب","عفرين"],
+36:["جامعة آرام للعلوم","إدلب","عقربات"],
+37:["جامعة المعالي","حلب","الباب"],
+38:["جامعة بلاد الشام للعلوم الشرعية (مجمع أحمد كفتارو)","دمشق","دمشق"],
+39:["جامعة بلاد الشام للعلوم الشرعية (مجمع الفتح الإسلامي)","دمشق","دمشق"],
+40:["جامعة بلاد الشام للعلوم الشرعية (مجمع السيدة رقية)","دمشق","دمشق"],
+41:["الجامعة الإسلامية","إدلب","الضبيط"],
+42:["كلية اللاهوت الخاصة","دمشق","دمشق"]
+};
+
+/* الصيغة: اسم الاختصاص | حد العلمي | حد الأدبي | رموز الجامعات (رمز أو رمز:اسم البرنامج) | ملاحظة */
+const PRIV = `
+#الطب والصيدلة
+الطب البشري | 80 | - | 1,2,3,4,5,6
+طب الأسنان | 75 | - | 1,9,10,2,11,12,3,4,13,14,15,16,17,18,19,6,7,20,21,22,23,24
+الصيدلة | 75 | - | 1,29,10,2,11,12,3,4,13,14,16,5,17,18,19,6,7,26,20,21,22,23,25:الصيدلة الصناعية
+#الهندسة والتقانة
+الهندسة المعلوماتية وتقانة المعلومات وهندسة الحاسوب | 65 | - | 1,14,25,8,9,11,12,4,13,17,18,19,6,26,20,27,21,23,28,15,29,30,31,22,32,33,10,5
+هندسة البرمجيات | 65 | - | 16,34,33,2:البرمجيات ونظم المعلومات الذكية
+هندسة الذكاء الاصطناعي والروبوت | 65 | - | 2:الذكاء الاصطناعي وعلوم البيانات / أمن النظم / الروبوت,14:الذكاء الاصطناعي,33:الحاسوب والذكاء الصنعي,21:الروبوت والأنظمة الذكية
+هندسة الاتصالات والمعلوماتية والاتصالات | 65 | - | 10,5,16,11,29,30,17,18,19,26,27,25,2:الاتصالات الذكية,15:الحواسيب والاتصالات المحمولة
+هندسة الميكاترونيك | 65 | - | 1,18,26,20,27,21,25
+هندسة الطاقة البديلة | 65 | - | 26
+الهندسة المدنية | 65 | - | 1,8,10,11,12,4,13,16,5,17,27,21,22,23,33:المدنية والمشروعات العامة,2:تكنولوجيا البناء والتشييد
+الهندسة المعمارية | 65 | - | 1,8,9,29,30,10,11,12,4,13,14,16,5,18,19,20,21,22,23,34,31,17,33 | يُشترط النجاح في امتحان الهندسة المعمارية.
+هندسة البترول | 65 | - | 2,14
+الهندسة الكيميائية | 65 | - | 14,27
+هندسة التقانات الغذائية والحيوية | 65 | - | 20:التقانات الغذائية,23:التقانات الحيوية
+الهندسة الطبية | 65 | - | 3,26,2:الطبية الذكية والمعلوماتية الحيوية
+#العلوم الصحية
+علوم التجميل والعناية بالبشرة | 60 | - | 4,14,12,24,20:التغذية التجميلية
+التغذية (التجميلية والعلاجية) | 60 | - | 4,20:التغذية العلاجية
+التغذية العلاجية | 50 | - | 24
+العلاج الفيزيائي والمعالجة الفيزيائية | 60 | - | 14,18,6,23,24
+العلاج الوظيفي | 60 | - | 21
+التخدير والإنعاش | 60 | - | 24,26,34,35
+المخابر والتحليل المخبري | 60 | - | 26,27,23,24,14,35
+الأشعة والبصريات واضطرابات النطق والسمع | 60 | - | 24
+الصحة العامة | 60 | - | 34
+طب الطوارئ | 60 | - | 27
+الصحة النفسية | 60 | - | 20
+التمريض | 55 | - | 3,4,27,23,24,34,35
+القبالة | 50 | - | 20,23,24,34,35
+#الإدارة والاقتصاد والأعمال
+إدارة الأعمال والعلوم الإدارية | 55 | 50 | 1,8,9,10,11,13,14,31,15,5,18,27,22,23,24,34,32,28,33,25,29,30,2,6,7,26,16,17,12,19,36,20
+المحاسبة | 55 | - | 13,14,5,18,22,27,33
+العلوم المالية والمصرفية | 55 | - | 1,11,5,18,14,21
+الاقتصاد | 55 | - | 27,33:الاقتصاد والتنمية
+التسويق | 55 | 50 | 11,15,21
+النقل الدولي والخدمات اللوجستية | 55 | 50 | 31
+نظم المعلومات الإدارية | 55 | 50 | 25
+الإدارة السياحية والفندقية | 55 | 50 | 21
+السياحة والإدارة الفندقية | 50 | 50 | 6
+إدارة المشافي | 55 | 55 | 3
+ريادة الأعمال | 55 | 50 | 4
+الكيمياء التطبيقية | 50 | - | 25
+#الحقوق والعلوم الإنسانية
+الحقوق | 55 | 50 | 1,10,12,4,13,14,5,17,18,6,7,22,23,34,28,33,27:الشريعة والقانون - القانون
+الشريعة والقانون (القانون والأحوال الشخصية) | 50 | 50 | 39
+علم النفس | 50 | 50 | 37,23,32:علم النفس التربوي
+الإرشاد النفسي | 50 | 50 | 8,26,27,34,32,28,33
+معلم الصف | 50 | 50 | 8,27,23,34,32,37,33
+التربية الخاصة | 50 | 50 | 37,33
+رياض الأطفال | 50 | 50 | 33
+المناهج وطرائق التدريس | 50 | 50 | 32,41
+التدريب الرياضي | 50 | 50 | 33 | يُشترط النجاح في امتحان التربية الرياضية.
+اللغة الإنكليزية وآدابها | 50 | 50 | 8,9,11,13,14,5:(وكذلك الترجمة),34,19,26,20,27,25
+اللغة العربية وآدابها | 50 | 50 | 5,34,39,36,37
+التاريخ | 50 | 50 | 37
+#الشريعة والدراسات الإسلامية
+الشريعة والفقه وأصوله | 50 | 50 | 27:الشريعة والقانون - الشريعة,40:الشريعة,36:الشريعة,34:الدراسات الإسلامية / الفقه وأصوله,39:الفقه وأصوله,32:الفقه وأصوله,38:الفقه وأصوله (55% للعلمي) | في مجمع كفتارو حدّ الفقه وأصوله للعلمي 55%.
+أصول الدين والعقيدة والقرآن والحديث والقراءات | 50 | 50 | 34:أصول الدين,37:أصول الدين,38:العقائد والأديان والفلسفة الإسلامية / علوم القرآن والحديث,39:علوم القرآن والحديث / القراءات القرآنية,41:القراءات القرآنية / الحديث النبوي وعلومه,32:التفسير وعلوم القرآن
+الدعوة الإسلامية | 50 | 50 | 39:الدعوة (وبالإنكليزية),41:الدعوة والإعلام الإسلامي
+الاقتصاد الإسلامي | 50 | 50 | 38
+اللاهوت | 50 | 50 | 42
+#الفنون والتصميم
+التصميم الغرافيكي | 50 | 50 | 1,11 | يُشترط النجاح في امتحان الفنون الجميلة.
+التصميم الداخلي والعمارة الداخلية | 50 | 50 | 11,16,10:العمارة الداخلية والاتصالات البصرية | يُشترط النجاح في امتحان الفنون الجميلة.
+الفنون المسرحية والإخراج السينمائي | 50 | 50 | 10 | اختبار القبول يُجرى في الجامعة العربية الدولية (10 – 14/10/2026).
+التمثيل (فنون الأداء) | 50 | 50 | 21 | اختبار القبول يُجرى في جامعة المنارة (10 – 14/10/2026).
+#المعاهد التقانية والتربوية
+معهد الأطراف الصناعية والأجهزة التعويضية | 50 | 50 | 20
+معهد التخدير | 50 | 50 | 34,35
+معهد المخابر والتحليل المخبري | 50 | 50 | 5,23,35
+معهد البصريات | 50 | 50 | 35
+معهد التعويضات السنية | 50 | 50 | 13,19,20,23,24,34,35
+معهد مساعد طبيب أسنان | 50 | 50 | 20
+معهد الصيدلة | 50 | 50 | 5,26,23
+معهد التغذية وعلوم الغذاء | 50 | 50 | 28
+معهد التمريض والقبالة | 50 | 50 | 23,34
+المعهد التقاني للحاسوب وعلوم الحاسوب | 50 | 50 | 26,20,37
+المعهد التقاني الهندسي (برمجيات، ذكاء اصطناعي، اتصالات، كهرباء) | 50 | 50 | 32
+المعهد التقني الهندسي (كهرباء، عمارة) | 50 | 50 | 37
+المعهد التقاني الهندسي (مدني، مساحة، عمارة) | 50 | 50 | 33
+المعهد التقاني للعلوم الإدارية والمالية | 50 | 50 | 33
+معهد التنمية الإدارية ونظم المعلومات | 50 | 50 | 36
+المعهد التربوي (إرشاد، معلم صف، رياضيات، إنكليزية، عربية، علوم شرعية) | 50 | 50 | 34
+معهد التنمية المجتمعية (البيئة والتنمية المستدامة) | 50 | 50 | 33
+معهد التصميم الجرافيكي | 50 | 50 | 28
+`;
+(function(){
+'use strict';
+var TAGS={a:'لأبناء المحافظة',o:'لباقي المحافظات',e:'لأبناء المحافظات الشرقية'};
+var PROV_ORDER=['دمشق','ريف دمشق','درعا','القنيطرة','السويداء','حلب','إدلب','اللاذقية','طرطوس','حمص','حماة','دير الزور','الحسكة','الرقة','حسب اختيار الطالب'];
+function $(s){return document.querySelector(s);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function norm(s){return String(s||'').replace(/[\u064B-\u065F\u0640]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').toLowerCase().trim();}
+function num(v){if(v==='-')return null;if(v.indexOf('+')>0)return v;return parseFloat(v);}
+function pct(v){if(v==null)return '<span class="na">—</span>';if(typeof v==='string'){var a=v.split('+');return a[0]+'% مع '+a[1]+'% بالمادة';}return v+'%';}
+function sortProv(a,b){var i=PROV_ORDER.indexOf(a),j=PROV_ORDER.indexOf(b);return (i<0?99:i)-(j<0?99:j);}
+
+/* ---------- parse public data ---------- */
+function parsePub(blob,branch){
+  var rows=[],cat='';
+  blob.split('\n').forEach(function(line){
+    line=line.trim(); if(!line) return;
+    if(line.charAt(0)==='#'){cat=line.slice(1).trim();return;}
+    var parts=line.split('|'),head=parts[0],note=(parts[1]||'').trim(),subj=false;
+    if(note.indexOf('{L}')===0){subj=true;note=note.slice(3).trim();}
+    var i=head.indexOf(':'),name=head.slice(0,i).trim();
+    head.slice(i+1).split(';').forEach(function(e){
+      e=e.trim(); if(!e) return;
+      var t=e.split(/\s+/),tt=t.splice(-3),loc=t.join(' '),tag='';
+      var m=loc.match(/@([aoe])$/); if(m){tag=m[1];loc=loc.slice(0,-2);}
+      var pr=loc.split('/');
+      rows.push({branch:branch,cat:cat,name:name,prov:pr[0],sub:pr[1]||'',tag:tag,g:num(tt[0]),p:num(tt[1]),t:num(tt[2]),note:note,subj:subj});
+    });
+  });
+  return rows;
+}
+var PUB=parsePub(PUB_SCI,'sci').concat(parsePub(PUB_LIT,'lit'),parsePub(PUB_INST,'inst'));
+
+/* ---------- parse private data ---------- */
+function parsePriv(blob){
+  var specs=[],cat='';
+  blob.split('\n').forEach(function(line){
+    line=line.trim(); if(!line) return;
+    if(line.charAt(0)==='#'){cat=line.slice(1).trim();return;}
+    var p=line.split('|').map(function(s){return s.trim();});
+    var unis=p[3].split(',').map(function(c){var k=c.indexOf(':');return k<0?{id:+c,label:''}:{id:+c.slice(0,k),label:c.slice(k+1).trim()};});
+    specs.push({cat:cat,name:p[0],sci:num(p[1]),lit:num(p[2]),unis:unis,note:p[4]||''});
+  });
+  return specs;
+}
+var SPECS=parsePriv(PRIV);
+
+/* ---------- state ---------- */
+var P={branch:'sci',q:'',prov:'',cat:'',score:null,limit:18};
+var V={view:'spec',q:'',prov:'',cat:'',br:'',score:null,limit:18};
+
+function fillSelect(sel,values,firstLabel){
+  var cur=sel.value;
+  sel.innerHTML='<option value="">'+firstLabel+'</option>'+values.map(function(v){return '<option>'+esc(v)+'</option>';}).join('');
+  if(values.indexOf(cur)>=0) sel.value=cur; else sel.value='';
+}
+function uniq(a){return a.filter(function(v,i){return a.indexOf(v)===i;});}
+
+/* ---------- public explorer ---------- */
+var BR_LABEL={sci:'الفرع العلمي',lit:'الفرع الأدبي',inst:'المعاهد الصحية والطبية'};
+function pubFiltered(){
+  var q=norm(P.q),groups={},order=[];
+  PUB.forEach(function(r){
+    if(r.branch!==P.branch) return;
+    if(P.prov&&r.prov!==P.prov) return;
+    if(P.cat&&r.cat!==P.cat) return;
+    if(P.score!=null&&!r.subj&&!(r.g!=null&&r.g<=P.score)) return;
+    if(q&&norm(r.name+' '+r.prov+' '+r.sub+' '+r.cat).indexOf(q)<0) return;
+    var k=r.cat+'||'+r.name;
+    if(!groups[k]){groups[k]={cat:r.cat,name:r.name,note:r.note,subj:r.subj,rows:[]};order.push(k);}
+    groups[k].rows.push(r);
+  });
+  return order.map(function(k){return groups[k];});
+}
+function renderPub(){
+  var list=pubFiltered(),res=$('#pubResults'),shown=list.slice(0,P.limit);
+  res.innerHTML=shown.length?shown.map(function(g){
+    var body=g.rows.map(function(r){
+      var hit=!r.subj&&P.score!=null&&r.g!=null&&r.g<=P.score;
+      var city=esc(r.prov)+(r.sub?' – '+esc(r.sub):'');
+      var tg=r.tag?'<span class="tag">'+TAGS[r.tag]+'</span>':'';
+      return '<tr><td>'+city+tg+'</td><td class="n'+(hit?' hit':'')+'">'+pct(r.g)+'</td><td class="n">'+pct(r.p)+'</td><td class="n">'+pct(r.t)+'</td></tr>';
+    }).join('');
+    return '<article class="sheet"><header><h3>'+esc(g.name)+'</h3><span class="chip">'+esc(g.cat)+'</span></header>'+
+      '<div class="tw"><table><thead><tr><th>المدينة</th><th>عامة</th><th>موازي</th><th>هيئة تدريسية</th></tr></thead><tbody>'+body+'</tbody></table></div>'+
+      (g.note?'<p class="note">'+esc(g.note)+'</p>':'')+'</article>';
+  }).join(''):'<div class="empty">لا توجد نتائج مطابقة. جرّب كلمة أقصر، أو أزل فلتر المحافظة أو المعدّل.</div>';
+  $('#pubMeta').textContent=list.length?('عدد الاختصاصات المعروضة: '+shown.length+' من '+list.length+' ('+BR_LABEL[P.branch]+')'):'';
+  $('#pubMore').hidden=list.length<=P.limit;
+  var n=$('#pubNote');
+  n.innerHTML=P.branch==='sci'?'<b>للعلمي أيضاً:</b> يمكن لطلاب الفرع العلمي التقدّم إلى الكليات الأدبية (اللغات، الفلسفة، علم الاجتماع، الجغرافية، الآثار، التربية، الشريعة، العلوم السياسية، السياحة…) بحدود أدنى أقل في الغالب، وهي عادةً <b>55% عامة، 50% موازي، 50% هيئة تدريسية</b> وتزيد في أمور محددة مثل الحقوق في دمشق (60%) والإعلام (65%). التاريخ غير متاح للعلمي. راجع الإعلان رقم 2 للتفاصيل.':
+    P.branch==='lit'?'<b>المعاهد التقانية والمتوسطة</b> في الفرع الأدبي أغلبها «لجميع المتقدمين» أو بشرط اختبار، ولم نعرضها هنا، راجع الإعلان رقم 4.':
+    '<b>معاهد أخرى:</b> المعاهد التقانية الهندسية والزراعية والإدارية والحاسوبية وغيرها لها حدود أقل أو مفتوحة لجميع المتقدمين في معظمها (50% إلى 60% في بعضها) ولم نعرضها هنا، راجع الإعلانات 2 و4.';
+}
+function refreshPubFilters(){
+  var rows=PUB.filter(function(r){return r.branch===P.branch;});
+  fillSelect($('#pubProv'),uniq(rows.map(function(r){return r.prov;})).sort(sortProv),'كل المحافظات');
+  fillSelect($('#pubCat'),uniq(rows.map(function(r){return r.cat;})),'كل الفئات');
+  P.prov=$('#pubProv').value;P.cat=$('#pubCat').value;
+}
+function bindPub(){
+  $('#pubBranch').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    P.branch=b.dataset.v;P.limit=18;
+    Array.prototype.forEach.call(this.children,function(x){x.classList.toggle('on',x===b);});
+    refreshPubFilters();renderPub();
+  });
+  $('#pubQ').addEventListener('input',function(){P.q=this.value;P.limit=18;renderPub();});
+  $('#pubProv').addEventListener('change',function(){P.prov=this.value;P.limit=18;renderPub();});
+  $('#pubCat').addEventListener('change',function(){P.cat=this.value;P.limit=18;renderPub();});
+  $('#pubScore').addEventListener('input',function(){var v=parseFloat(this.value);P.score=isNaN(v)?null:v;P.limit=18;renderPub();});
+  $('#pubMore').addEventListener('click',function(){P.limit+=18;renderPub();});
+}
+
+/* ---------- private explorer ---------- */
+function uniLine(u,label){
+  var d=UNIS[u.id];
+  return '<li><span>'+esc(d[0])+(label?' <small>('+esc(label)+')</small>':'')+(d[3]?' <span class="chip gold">مقر مؤقت</span>':'')+'</span><small>'+esc(d[1])+' – '+esc(d[2])+'</small></li>';
+}
+function privSpecList(){
+  var q=norm(V.q);
+  var out=[];
+  SPECS.forEach(function(s){
+    if(V.cat&&s.cat!==V.cat) return;
+    var th=V.br==='sci'?s.sci:V.br==='lit'?s.lit:null;
+    if(V.br&&th==null) return;
+    if(V.br===''&&s.sci==null&&s.lit==null) return;
+    var minTh=V.br===''?Math.min(s.sci==null?999:s.sci,s.lit==null?999:s.lit):th;
+    if(V.score!=null&&!(minTh<=V.score)) return;
+    var specMatch=q&&norm(s.name+' '+s.cat).indexOf(q)>=0;
+    var us=s.unis.filter(function(u){
+      var d=UNIS[u.id];
+      if(V.prov&&d[1]!==V.prov) return false;
+      if(q&&!specMatch&&norm(d[0]+' '+d[2]+' '+u.label).indexOf(q)<0) return false;
+      return true;
+    });
+    if(!us.length) return;
+    out.push({s:s,us:us});
+  });
+  return out;
+}
+function privUniList(){
+  var q=norm(V.q),res=[];
+  Object.keys(UNIS).forEach(function(id){
+    var d=UNIS[id];id=+id;
+    if(V.prov&&d[1]!==V.prov) return;
+    var offered=[];
+    SPECS.forEach(function(s){
+      if(s.unis.some(function(u){return u.id===id;})){
+        if(V.score!=null&&!(Math.min(s.sci==null?999:s.sci,s.lit==null?999:s.lit)<=V.score)) return;
+        offered.push(s.name);
+      }
+    });
+    if(V.score!=null&&!offered.length) return;
+    if(q&&norm(d[0]+' '+d[1]+' '+d[2]).indexOf(q)<0&&!offered.some(function(n){return norm(n).indexOf(q)>=0;})) return;
+    res.push({id:id,d:d,offered:offered});
+  });
+  return res;
+}
+function renderPriv(){
+  var res=$('#privResults'),meta=$('#privMeta'),more=$('#privMore');
+  if(V.view==='spec'){
+    var list=privSpecList(),shown=list.slice(0,V.limit);
+    res.innerHTML=shown.length?shown.map(function(x){
+      var s=x.s;
+      var chips='<div class="th">'+(s.sci!=null?'<span class="chip ok">علمي: '+s.sci+'%</span>':'')+(s.lit!=null?'<span class="chip ok">أدبي: '+s.lit+'%</span>':'')+'</div>';
+      return '<article class="sheet"><header><h3>'+esc(s.name)+'</h3><span class="chip">'+esc(s.cat)+'</span></header>'+chips+
+        '<ul class="ul">'+x.us.map(function(u){return uniLine(u,u.label);}).join('')+'</ul>'+
+        (s.note?'<p class="note">'+esc(s.note)+'</p>':'')+'</article>';
+    }).join(''):'<div class="empty">لا توجد نتائج مطابقة. جرّب كلمة أقصر أو أزل أحد الفلاتر.</div>';
+    meta.textContent=list.length?('عدد الاختصاصات: '+shown.length+' من '+list.length):'';
+    more.hidden=list.length<=V.limit;
+  }else{
+    var us=privUniList(),sh=us.slice(0,V.limit);
+    res.innerHTML=sh.length?sh.map(function(x){
+      var first=x.offered.slice(0,6),rest=x.offered.slice(6);
+      return '<article class="sheet uni"><h3>'+esc(x.d[0])+'</h3><p>'+esc(x.d[1])+' – '+esc(x.d[2])+(x.d[3]?' <span class="chip gold">مقر مؤقت للعام 2026 – 2027</span>':'')+'</p>'+
+        '<div class="th">'+first.map(function(n){return '<span class="chip">'+esc(n)+'</span>';}).join('')+'</div>'+
+        (rest.length?'<details class="mini"><summary>و'+rest.length+' اختصاصات أخرى</summary><div class="th">'+rest.map(function(n){return '<span class="chip">'+esc(n)+'</span>';}).join('')+'</div></details>':'')+
+        '<p style="margin-top:6px">عدد الاختصاصات والمعاهد: '+x.offered.length+'</p></article>';
+    }).join(''):'<div class="empty">لا توجد جامعات مطابقة.</div>';
+    meta.textContent=us.length?('عدد الجامعات: '+sh.length+' من '+us.length):'';
+    more.hidden=us.length<=V.limit;
+  }
+}
+function syncPrivView(){
+  var spec=V.view==='spec';
+  $('#privCatWrap').style.display=spec?'':'none';
+  $('#privBrWrap').style.display=spec?'':'none';
+}
+function bindPriv(){
+  fillSelect($('#privProv'),uniq(Object.keys(UNIS).map(function(k){return UNIS[k][1];})).sort(sortProv),'كل المحافظات');
+  fillSelect($('#privCat'),uniq(SPECS.map(function(s){return s.cat;})),'كل الفئات');
+  $('#privView').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    V.view=b.dataset.v;V.limit=18;
+    Array.prototype.forEach.call(this.children,function(x){x.classList.toggle('on',x===b);});
+    syncPrivView();renderPriv();
+  });
+  $('#privQ').addEventListener('input',function(){V.q=this.value;V.limit=18;renderPriv();});
+  $('#privProv').addEventListener('change',function(){V.prov=this.value;V.limit=18;renderPriv();});
+  $('#privCat').addEventListener('change',function(){V.cat=this.value;V.limit=18;renderPriv();});
+  $('#privBr').addEventListener('change',function(){V.br=this.value;V.limit=18;renderPriv();});
+  $('#privScore').addEventListener('input',function(){var v=parseFloat(this.value);V.score=isNaN(v)?null:v;V.limit=18;renderPriv();});
+  $('#privMore').addEventListener('click',function(){V.limit+=18;renderPriv();});
+}
+
+/* ---------- hero, countdown, theme ---------- */
+function setQuery(q){
+  $('#pubQ').value=q;P.q=q;P.limit=18;renderPub();
+  var el=document.getElementById('public');if(el) el.scrollIntoView();
+}
+function countdown(){
+  var end=new Date('2026-10-19T23:59:59+03:00'),now=new Date(),el=$('#countdown');
+  var days=Math.ceil((end-now)/86400000);
+  el.textContent=days>1?('باقي '+days+' أيام على إغلاق التقديم'):days===1?'باقي يوم واحد على إغلاق التقديم':days===0?'اليوم آخر يوم للتقديم':'انتهت فترة التقديم المعلنة';
+}
+function theme(){
+  var root=document.documentElement,btn=$('#themeBtn');
+  try{var saved=localStorage.getItem('uni-theme');if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('uni-theme',next);}catch(e){}
+  });
+}
+
+function init(){
+  refreshPubFilters();bindPub();renderPub();
+  bindPriv();syncPrivView();renderPriv();
+  $('#heroForm').addEventListener('submit',function(e){e.preventDefault();setQuery($('#heroQ').value);});
+  Array.prototype.forEach.call(document.querySelectorAll('.quick button'),function(b){
+    b.addEventListener('click',function(){$('#heroQ').value=b.dataset.q;setQuery(b.dataset.q);});
+  });
+  countdown();theme();
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+</body>
+</html>
